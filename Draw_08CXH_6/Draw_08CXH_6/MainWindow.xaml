@@ -1,0 +1,87 @@
+﻿<Window x:Class="Draw_08CXH_6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="几何体编辑器" 
+        Height="540" Width="960" 
+        Background="#FFF8FEFF" Foreground="#FFDEF8FF" 
+        WindowState="Normal" 
+        WindowStyle="ThreeDBorderWindow" 
+        FontFamily="Microsoft YaHei UI"
+        FontSize="12" MinHeight="540" MinWidth="960" WindowStartupLocation="CenterScreen" Icon="/Draw_08CXH_6;component/Image/p.png" Opacity="1" AllowsTransparency="False">
+
+    <Grid Name="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="395*" />
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+
+        <Menu Name="menu1" FontFamily="SimHei" FontSize="14" FontStretch="Expanded" IsEnabled="True" Background="#FFAECEDB" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+            <MenuItem Header="文件" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="20">
+                <MenuItem Header="打开" Click="InputFromTxtButton_Click" />
+                <MenuItem Header="保存" Click="OutputButton_Click" />
+            </MenuItem>
+            <MenuItem Header="绘图" FontFamily="SimHei" FontSize="14" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="20">
+                <MenuItem Header="点" Click="CreatePoint_Click" />
+                <MenuItem Header="折线" Click="CreatePolyline_Click" />
+                <MenuItem Header="矩形" Click="CreateRectangle_Click" />
+                <MenuItem Header="圆" Click="CreateCircle_Click" />
+                <MenuItem Header="多边形" Click="CreatePolygon_Click" />
+            </MenuItem>
+            
+            <MenuItem Header="画布操作" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="20" FontStretch="Expanded"  >
+                <MenuItem Header="显示所有" Click="PrintAllFeatures_Click" />
+                <MenuItem Header="清除全部" Click="AC_Click" />
+            </MenuItem>
+        </Menu>
+        <ToolBar Grid.Row="1" Name="toolBar1" Background="#FFCCE2EA">
+            <Button  Content="画点" MinHeight="25" MinWidth="40" Padding="1" Click="CreatePoint_Click" FontFamily="Microsoft YaHei"  />
+            <Button  Content="画折线" MinHeight="25" MinWidth="50" Padding="1" Click="CreatePolyline_Click" FontFamily="Microsoft YaHei" />
+            <Button  Content="画矩形" MinHeight="25" MinWidth="50" Padding="1" Click="CreateRectangle_Click" FontFamily="Microsoft YaHei" />
+            <Button  Content="画圆" MinHeight="25" MinWidth="40" Padding="1" Click="CreateCircle_Click" FontFamily="Microsoft YaHei" />
+            <Button  Content="画多边形" MinHeight="25" MinWidth="60" Padding="1" Click="CreatePolygon_Click" FontFamily="Microsoft YaHei" />
+            <Separator Background="#FF1F6175" />
+        </ToolBar>
+
+        <Grid Margin="0,0,0,0" Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="700*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="230*" />
+            </Grid.ColumnDefinitions>
+
+            <Canvas Name="DrawBoard" Background="Snow" MouseDown="DrawBoard_MouseDown" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True" ClipToBounds="True" ScrollViewer.VerticalScrollBarVisibility="Auto" MouseMove="DrawBoard_MouseMove"></Canvas>
+            
+            <GridSplitter Grid.Column="1" Name="gridSplitter1" Margin="0,0,0,0" HorizontalAlignment="Stretch" Background="#FFA3A3A3" Width="5" />
+            <TextBox Name="Result" IsReadOnly="True" AcceptsTab="True"  Grid.Column="2"  Foreground="#FF444444" BorderThickness="0.2" HorizontalContentAlignment="Right" TextAlignment="Left" />
+        </Grid>
+
+        <StatusBar Grid.Row="3" Margin="0,0,0,0
+                   " Name="statusBar1">
+            <StatusBarItem Content="状态" Name="NowState" Background="#FFB7D0D8" />
+            <Separator/>
+            <StatusBarItem Content="坐标"  Name="XY" FlowDirection="LeftToRight" />
+            <StatusBarItem Content="- -" Name="Cood"  FlowDirection="LeftToRight" FontWeight="Normal" />
+            <Separator/>
+            <StatusBarItem Content="绘制类型：" />
+            <StatusBarItem Content="请先在菜单栏选择绘制类型." Name="DrawWhat"/>
+            <Separator/>
+            <StatusBarItem Content="点计数" />
+            <StatusBarItem Content="0" Name="PointCount"/>
+            <Separator/>
+            <StatusBarItem Content="折线计数" />
+            <StatusBarItem Content="0" Name="PolylineCount"/>
+            <Separator/>
+            <StatusBarItem Content="矩形计数" />
+            <StatusBarItem Content="0" Name="RectangleCount"/>
+            <Separator/>
+            <StatusBarItem Content="圆计数" />
+            <StatusBarItem Content="0" Name="CircleCount"/>
+            <Separator/>
+            <StatusBarItem Content="多边形计数" />
+            <StatusBarItem Content="0" Name="PolygonCount"/>
+            <StatusBarItem Content="作者:陈旭辉;版本:V6" HorizontalAlignment="Right" />
+        </StatusBar>
+    </Grid>
+</Window>

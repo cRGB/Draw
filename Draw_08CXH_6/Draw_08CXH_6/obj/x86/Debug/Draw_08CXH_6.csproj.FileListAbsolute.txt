@@ -1,0 +1,13 @@
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\obj\x86\Debug\MainWindow.baml
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\obj\x86\Debug\MainWindow.g.cs
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\obj\x86\Debug\App.g.cs
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\obj\x86\Debug\Draw_08CXH_6_MarkupCompile.cache
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\obj\x86\Debug\Draw_08CXH_6.g.resources
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\obj\x86\Debug\Draw_08CXH_6.Properties.Resources.resources
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\bin\Debug\Draw_08CXH_6.exe
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\bin\Debug\Draw_08CXH_6.pdb
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\obj\x86\Debug\Draw_08CXH_6.exe
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\obj\x86\Debug\Draw_08CXH_6.pdb
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\obj\x86\Debug\ResolveAssemblyReference.cache
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+H:\C#\MyProgram\Draw_08CXH_6\Draw_08CXH_6\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
